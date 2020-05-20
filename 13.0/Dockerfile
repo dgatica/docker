@@ -17,8 +17,6 @@ RUN apt-get update \
             libssl-dev \
             node-less \
             npm \
-            pysftp==0.2.8 \
-            polib==1.1.0 \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \
