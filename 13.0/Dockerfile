@@ -21,7 +21,9 @@ RUN apt-get update \
 	    python-setuptools \
 	    python-wheel \ 
             python-virtualenv \
-            python-dev \
+            python3-wheel \ 
+            python3-virtualenv \
+            python3-dev \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \
