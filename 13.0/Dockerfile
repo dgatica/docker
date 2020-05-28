@@ -19,6 +19,9 @@ RUN apt-get update \
             npm \
 	    python-pip \
 	    python-setuptools \
+	    python-wheel \ 
+            python-virtualenv \
+            python-dev \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \
