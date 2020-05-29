@@ -19,7 +19,6 @@ RUN apt-get update \
             gnupg \
             libssl1.0-dev \
             node-less \
-            npm \
             python3-wheel \ 
             python3-virtualenv \
             python3-dev \
