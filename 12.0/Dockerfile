@@ -19,6 +19,10 @@ RUN apt-get update \
             gnupg \
             libssl1.0-dev \
             node-less \
+            npm \
+            python3-wheel \ 
+            python3-virtualenv \
+            python3-dev \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \
@@ -74,6 +78,9 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
         && apt-get update \
         && apt-get -y install --no-install-recommends ./odoo.deb \
         && rm -rf /var/lib/apt/lists/* odoo.deb
+        
+# install extra libs
+RUN pip3 install urllib3==1.24.3       
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
