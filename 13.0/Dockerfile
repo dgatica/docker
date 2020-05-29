@@ -54,7 +54,6 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > /etc/
 
 # Install rtlcss (on Debian buster)
 RUN npm install -g rtlcss
-RUN pip install urllib3==1.24.3
 
 # Install Odoo
 ENV ODOO_VERSION 13.0
@@ -65,6 +64,9 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
         && apt-get update \
         && apt-get -y install --no-install-recommends ./odoo.deb \
         && rm -rf /var/lib/apt/lists/* odoo.deb
+        
+# install extra libs
+RUN pip3 install urllib3==1.24.3       
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
