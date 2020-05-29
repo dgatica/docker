@@ -17,10 +17,6 @@ RUN apt-get update \
             libssl-dev \
             node-less \
             npm \
-	    python-pip \
-	    python-setuptools \
-	    python-wheel \ 
-            python-virtualenv \
             python3-wheel \ 
             python3-virtualenv \
             python3-dev \
