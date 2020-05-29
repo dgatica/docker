@@ -54,6 +54,7 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > /etc/
 
 # Install rtlcss (on Debian buster)
 RUN npm install -g rtlcss
+RUN pip install urllib3==1.24.3
 
 # Install Odoo
 ENV ODOO_VERSION 13.0
