@@ -83,7 +83,7 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
         
 # install extra libs
 RUN pip3 install urllib3==1.24.3
-RUN pip3 install xmlsec
+
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
